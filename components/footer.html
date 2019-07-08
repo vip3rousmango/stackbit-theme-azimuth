@@ -1,0 +1,70 @@
+<footer id="colophon" class="site-footer">
+  <div class="footer-top outer">
+    <div class="inner">
+      <div class="footer-widgets">
+
+        <div class="widget footer-branding">
+          {% if site.params.footer.logo_img %}
+          <p class="site-logo">
+            <a href='{{ "/" | relative_url }}'><img src="{{ site.params.footer.logo_img | relative_url }}" alt="Logo" /></a>
+          </p>
+          {% else %}
+          <p class="site-title">
+            <a href='{{ "/" | relative_url }}'>{{ site.params.header.title }}</a>
+          </p>
+          {% endif %}
+          {% if site.params.footer.tagline %}
+          <p class="site-description">
+            {{ site.params.footer.tagline }}
+          </p>
+          {% endif %}
+        </div><!-- .widget -->
+
+        {% if site.menus.secondary and site.params.footer.has_nav or site.params.footer.has_social %}
+        <nav class="widget footer-navigation">
+          <div class="footer-nav-inside">
+            {% if site.menus.secondary and site.params.footer.has_nav %}
+            <div class="secondary-nav">
+              <h2 class="widget-title">{{ site.params.footer.nav_title }}</h2>
+              <ul class="secondary-menu">
+                {% for item in site.menus.secondary %}
+                <li>
+                  <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div><!-- .secondary-nav -->
+            {% endif %}
+            {% if site.params.footer.has_social %}
+            <div class="social-nav">
+              <h2 class="widget-title">{{ site.params.footer.social_title }}</h2>
+              {% include "social.html" %}
+            </div><!-- .social-nav -->
+            {% endif %}
+          </div><!-- .footer-nav-inside -->
+        </nav><!-- .widget -->
+        {% endif %}
+        {% if site.params.footer.has_subscribe %}
+        <div class="widget footer-subscribe">
+          <h2 class="widget-title">{{ site.params.footer.subscribe_title }}</h2>
+          {% if site.params.footer.subscribe_content %}
+          <p>{{ site.params.footer.subscribe_content | safe }}</p>
+          {% endif %}
+          {% include "subscribe_form.html" %}
+        </div><!-- .widget -->
+        {% endif %}
+      </div><!-- .footer-widgets -->
+    </div><!-- .inner -->
+  </div><!-- .outer -->
+
+  <div class="site-info outer">
+    <div class="inner">
+      {{ site.params.footer.content | safe }}
+      &nbsp;
+      {% for link in site.params.footer.links %}
+      <a href="{{ link.url }}" {% if link.new_window %}target="_blank" rel="noopener" {% endif %}>{{ link.text }}</a>.
+      {% endfor %}
+    </div><!-- .inner -->
+  </div><!-- .site-info -->
+
+</footer><!-- .site-footer -->
