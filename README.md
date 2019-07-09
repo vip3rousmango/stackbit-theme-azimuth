@@ -4,17 +4,13 @@ A sleek SaaS theme for Stackbit. [Live Demo](https://themes.stackbit.com/demos/a
 
 [![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/stackbithq/stackbit-theme-azimuth)
 
-### Stackbit Themes
+### Turn themes into CMS-powered websites
 
-Use this theme with [Stackbit](https://www.stackbit.com) to create a website powered by any combination of static site generator and headless CMS.
+[Stackbit](https://www.stackbit.com/) provisions your theme's content model with a growing selection of headless CMS and pulls the content for you in the format your static site generator expects it. This is powered by a single config file, [stackbit.yaml](https://docs.stackbit.com/uniform/stackbit-yaml/), which defines a [Uniform theme model](https://docs.stackbit.com/uniform/) and enables integration with CMS like Contentful, DatoCMS, Forestry, NetlifyCMS, etc.
 
-### Pick your Static Site Generator
+### One theme codebase converts to multiple Static Site Generators
 
-This theme is built using [Unibit](https://docs.stackbit.com/unibit) which is a superset of popular static site generators. Stackbit can transpile this theme into a Jekyll, Hugo or Gatsby site (more generators coming soon).
-
-### Pick your Headless CMS
-
-The included [stackbit.yaml](https://docs.stackbit.com/uniform/stackbit-yaml/) file defines a universal content model for your content, front matter and data. Stackbit can automatically connect this theme to CMS like Contentful, DatoCMS, Forestry, Netlify CMS, etc.
+This theme in particular is written in [Unibit](https://docs.stackbit.com/unibit/), a superset of static site generators. Unibit's powerful transpiling engine enables you to write once and stay SSG agnostic. Themes will automatically work with new generators as they are added and can currently convert to Jekyll, Hugo & Gatsby.
 
 ## Quickstart
 
