@@ -1,0 +1,29 @@
+<section id="{{ include_dict.section.section_id }}" class="block faq-block bg-{{ include_dict.section.bg }} outer">
+  <div class="inner-small">
+    <div class="block-header">
+      <h2 class="block-title">{{ include_dict.section.title }}</h2>
+      {% if include_dict.section.subtitle %}
+      <p class="block-subtitle">
+        {{ include_dict.section.subtitle | safe }}
+      </p>
+      {% endif %}
+    </div><!-- .block-header -->
+    {% if include_dict.section.faqitems %}
+    <dl class="faq-accordion">
+      {% for faqitem in include_dict.section.faqitems %}
+      <dt class="accordion-header">
+        <button class="accordion-trigger">
+          <div class="accordion-title">{{ faqitem.question }}</div>
+          <div class="accordion-icon icon-plus"></div>
+        </button>
+      </dt>
+      <dd class="accordion-panel">
+        <div class="accordion-content">
+          {{ faqitem.answer | markdownify }}
+        </div>
+      </dd>
+      {% endfor %}
+    </dl><!-- .faq-accordion -->
+    {% endif %}
+  </div><!-- .inner-small -->
+</section><!-- .block -->

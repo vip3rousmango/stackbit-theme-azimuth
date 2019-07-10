@@ -1,0 +1,29 @@
+<section id="{{ include_dict.section.section_id }}" class="block reviews-block bg-{{ include_dict.section.bg }} outer">
+  <div class="block-header inner-small">
+    <h2 class="block-title">{{ include_dict.section.title }}</h2>
+    {% if include_dict.section.subtitle %}
+    <p class="block-subtitle">
+      {{ include_dict.section.subtitle | safe }}
+    </p>
+    {% endif %}
+  </div><!-- .block-header -->
+  {% if include_dict.section.reviews %}
+  <div class="inner">
+    <div class="grid">
+      {% for review in include_dict.section.reviews %}
+      <blockquote class="cell review">
+        <div class="review-inside">
+          <p class="review-text">{{ review.content | safe }}</p>
+          <footer class="review-footer">
+            {% if review.avatar %}
+            <img class="review-avatar" src="{{ review.avatar | relative_url }}" alt="Author avatar">
+            {% endif %}
+            <cite class="review-author">{{ review.author }}</cite>
+          </footer>
+        </div><!-- .review-inside -->
+      </blockquote><!-- .review -->
+      {% endfor %}
+    </div><!-- .grid -->
+  </div><!-- .inner -->
+  {% endif %}
+</section><!-- .block -->
