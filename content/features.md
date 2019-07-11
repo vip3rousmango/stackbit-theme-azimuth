@@ -18,7 +18,7 @@ sections:
 
     actions:
       - label: Free Trial
-        url: "/signup.html"
+        url: "/signup"
       - label: View Demo
         url: "#"
   - section_id: call-to-action

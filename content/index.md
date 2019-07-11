@@ -10,7 +10,7 @@ sections:
       Azimuth is the perfect theme for developers, designers and entrepreneurs who need a sleek, modern SaaS site. 
     actions:
       - label: Learn More
-        url: "/features.html"
+        url: "/features"
   - section_id: features
     component: "features_block.html"
     type: featuresblock

@@ -18,7 +18,7 @@ sections:
           * Etiam eget dui a augue
         actions:
           - label: Order Now
-            url: "/signup.html"
+            url: "/signup"
       - title: Professional
         price: $49/m
         details: |-
