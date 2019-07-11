@@ -25,21 +25,21 @@ sections:
           Nam pulvinar ante eu ultricies volutpat. Aenean hendrerit, eros sed aliquet luctus, lorem risus volutpat dolor, nec dignissim diam neque consequat ex.
         actions:
           - label: Learn More
-            url: "/features.html"
+            url: "/features"
       - title: Awesome Feature of Your Services
         image: images/feature2.png
         content: |-
           Etiam vel urna sed massa egestas vulputate eu a velit. Sed ut nisl nec sapien interdum luctus. Cras rhoncus condimentum metus sit amet auctor.
         actions:
           - label: Learn More
-            url: "/features.html"
+            url: "/features"
       - title: Cool Feature of Your Services
         image: images/feature3.png
         content: |-
           In ante enim, lobortis quis congue vel, finibus sit amet mi. Aenean quis venenatis sem. Proin eget massa id metus eleifend maximus sit amet nec urna.
         actions:
           - label: Learn More
-            url: "/features.html"
+            url: "/features"
   - section_id: reviews
     component: "reviews_block.html"
     type: reviewsblock
@@ -68,7 +68,7 @@ sections:
       This is an optional description for the call to action block.
     actions:
       - label: Get Started
-        url: "/signup.html"
+        url: "/signup"
   - section_id: recent-posts
     component: "posts_block.html"
     type: postsblock

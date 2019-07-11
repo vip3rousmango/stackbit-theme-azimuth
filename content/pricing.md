@@ -30,7 +30,7 @@ sections:
         highlight: true
         actions:
           - label: Order Now
-            url: "/signup.html"
+            url: "/signup"
       - title: Enterprise
         price: $149/m
         details: |-
@@ -40,7 +40,7 @@ sections:
           * Phasellus lobortis risus
         actions:
           - label: Order Now
-            url: "/signup.html"
+            url: "/signup"
   - section_id: faq
     component: "faq_block.html"
     type: faqblock
