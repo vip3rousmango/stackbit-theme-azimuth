@@ -1,5 +1,12 @@
-stackbitVersion: ~0.2.39
+stackbitVersion: ~0.2.0
+ssgName: unibit
+buildCommand: unibit build
+publishDir: output
+staticDir: static
 uploadDir: images
+dataDir: data
+pagesDir: content
+pageLayoutKey: layout
 metadata:
   title: Azimuth
   description: A sleek SaaS theme
@@ -602,5 +609,3 @@ stackbit_banner:
   name: Azimuth
   create_url: 'https://app.stackbit.com/create?theme=azimuth'
   github_url: 'https://github.com/stackbithq/stackbit-theme-azimuth'
-pagesDir: content
-staticDir: static
