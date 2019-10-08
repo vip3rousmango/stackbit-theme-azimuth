@@ -81,6 +81,12 @@
         margin-right: auto;
         max-width: 555px;
         text-align: center;
+
+        .underline {
+          &:after {
+            display: none;
+          }
+        }
       }
     }
 
@@ -497,6 +503,33 @@
   }
 }
 
+/* Contact */
+.contact-block {
+  .contact-form {
+    margin-bottom: 1.66667rem;
+  }
+
+  &:only-child {
+    .block-header {
+      max-width: 750px;
+    }
+
+    .block-title {
+      font-size: 2.44444rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .block-subtitle {
+      border-bottom: 1px solid _palette(border);
+      font-size: 1.33333rem;
+      line-height: 1.5;
+      margin-bottom: 1.66667rem;
+      padding-bottom: 1.33333rem;
+      text-align: left;
+    }
+  }
+}
+
 .block {
   &.bg-white {
     background: #fff;
@@ -510,7 +543,7 @@
 
   &.bg-accent {
     background: _palette(accent);
-    background: -webkit-linear-gradient(to right,_palette(accent), _palette(accent-alt));
+    background: -webkit-linear-gradient(left,_palette(accent), _palette(accent-alt));
     background: linear-gradient(to right,_palette(accent), _palette(accent-alt));
     color: #fff;
 

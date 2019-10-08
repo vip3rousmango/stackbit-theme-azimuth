@@ -7,7 +7,9 @@
       </div><!-- .block-preview -->
       {% endif %}
       <div class="cell block-content">
+        {% if include_dict.section.title %}
         <h2 class="block-title underline">{{ include_dict.section.title }}</h2>
+        {% endif %}
         <div class="block-copy">
           {{ include_dict.section.content | markdownify }}
         </div>

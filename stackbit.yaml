@@ -506,20 +506,22 @@ models:
     extends:
       - section
     fields:
-      - name: title
-        required: true
       - type: string
         name: subtitle
         label: Subtitle
         description: The text shown below the title.
-      - type: image
-        name: img_path
-        label: Image
-        description: The image shown below the title.
       - type: markdown
         name: content
         label: Content
         description: The text content of the section, appears before contact form
+      - type: enum
+        name: bg
+        label: Background
+        description: The background of the section.
+        options:
+          - gray
+          - white
+        default: gray
   action:
     type: object
     label: Action

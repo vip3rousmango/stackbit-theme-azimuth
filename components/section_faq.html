@@ -1,7 +1,9 @@
 <section id="{{ include_dict.section.section_id }}" class="block faq-block bg-{{ include_dict.section.bg }} outer">
   <div class="inner-small">
     <div class="block-header">
+      {% if include_dict.section.title %}
       <h2 class="block-title">{{ include_dict.section.title }}</h2>
+      {% endif %}
       {% if include_dict.section.subtitle %}
       <p class="block-subtitle">
         {{ include_dict.section.subtitle | safe }}

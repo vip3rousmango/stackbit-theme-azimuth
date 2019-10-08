@@ -1,47 +1,38 @@
 {% set section = include_dict.section %}
-<section id="{{ section.section_id }}" class="outer">
-    <div class="inner-medium">
-
-        <article class="post page post-full">
-            <header class="post-header">
-                <h1 class="post-title">{{ section.title }}</h1>
-            </header><!-- .post-header -->
-            {% if section.subtitle %}
-            <div class="post-subtitle">
-                {{ section.subtitle | safe }}
-            </div><!-- .post-subtitle -->
-            {% endif %}
-            {% if section.img_path %}
-            <div class="post-thumbnail">
-                <img src="{{ section.img_path | relative_url }}" alt="{{ section.title }}" />
-            </div><!-- .post-thumbnail -->
-            {% endif %}
-            <div class="post-content">
-                {{ section.content | markdownify }}
-                <form name="contactForm" method="POST" netlify-honeypot="bot-field" data-netlify="true" id="contact-form"
-                      class="contact-form">
-                    <p class="screen-reader-text">
-                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                    </p>
-                    <p class="form-row">
-                        <label class="form-label">Name</label>
-                        <input type="text" name="name" class="form-input">
-                    </p>
-                    <p class="form-row">
-                        <label class="form-label">Email address</label>
-                        <input type="email" name="email" class="form-input">
-                    </p>
-                    <p class="form-row">
-                        <label class="form-label">Message</label>
-                        <textarea name="message" class="form-textarea" rows="7"></textarea>
-                    </p>
-                    <input type="hidden" name="form-name" value="contactForm" />
-                    <p class="form-row form-submit">
-                        <button type="submit" class="button">Send Message</button>
-                    </p>
-                </form><!-- .contact-form -->
-            </div><!-- .post-content -->
-        </article><!-- .post -->
-
-    </div><!-- .inner-medium -->
+<section id="{{ section.section_id }}" class="block contact-block bg-{{ section.bg }} outer">
+  <div class="block-header inner-small">
+    {% if section.title %}
+    <h2 class="block-title">{{ section.title }}</h2>
+    {% endif %}
+    {% if section.subtitle %}
+    <p class="block-subtitle">
+      {{ section.subtitle | safe }}
+    </p>
+    {% endif %}
+  </div><!-- .block-header -->
+  <div class="block-content inner-medium">
+    {{ section.content | markdownify }}
+    <form name="contactForm" method="POST" netlify-honeypot="bot-field" data-netlify="true" id="contact-form"
+      class="contact-form">
+      <p class="screen-reader-text">
+        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <p class="form-row">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-input">
+      </p>
+      <p class="form-row">
+        <label class="form-label">Email address</label>
+        <input type="email" name="email" class="form-input">
+      </p>
+      <p class="form-row">
+        <label class="form-label">Message</label>
+        <textarea name="message" class="form-textarea" rows="7"></textarea>
+      </p>
+      <input type="hidden" name="form-name" value="contactForm" />
+      <p class="form-row form-submit">
+        <button type="submit" class="button">Send Message</button>
+      </p>
+    </form><!-- .contact-form -->
+  </div><!-- .block-content -->
 </section><!-- .outer-->
