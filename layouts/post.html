@@ -9,9 +9,9 @@
       <header class="post-header">
         <h1 class="post-title">{{ page.params.title }}</h1>
       </header><!-- .post-header -->
-      {% if page.params.content_img_path %}
+      {% if page.params.img_path %}
       <div class="post-thumbnail">
-        <img src="{{ page.params.content_img_path | relative_url }}" alt="{{ page.params.title }}" />
+        <img src="{{ page.params.img_path | relative_url }}" alt="{{ page.params.title }}" />
       </div><!-- .post-thumbnail -->
       {% endif %}
       {% if page.params.subtitle %}

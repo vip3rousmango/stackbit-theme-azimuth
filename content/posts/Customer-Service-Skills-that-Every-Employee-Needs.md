@@ -6,7 +6,7 @@ excerpt: >-
     Sed nec metus dignissim quam finibus aliquet. Cras luctus, nibh id consequat interdum, massa massa tempor ante.
 date: 2018-01-11
 thumb_img_path: images/5_thumb.jpg
-content_img_path: images/5.jpg
+img_path: images/5.jpg
 template: post
 ---
 

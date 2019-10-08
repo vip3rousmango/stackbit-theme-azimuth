@@ -10,7 +10,7 @@
           </a>
         </p><!-- .site-logo -->
         {% endif %}
-        {% if page.template == "home" or page.template == "blog" %}
+        {% if page.template == "landing" or page.template == "blog" %}
         <h1 class="site-title"><a href='{{ "/" | relative_url }}'>{{ site.params.header.title }}</a></h1>
         {% else %}
         <p class="site-title"><a href='{{ "/" | relative_url }}'>{{ site.params.header.title }}</a></p>
