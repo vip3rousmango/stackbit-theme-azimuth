@@ -2,8 +2,7 @@
 title: Features
 sections:
   - section_id: features
-    component: "content_block.html"
-    type: contentblock
+    type: section_content
     bg: gray
     image: images/feature1.png
     title: The Best Features of Your Services
@@ -22,8 +21,7 @@ sections:
       - label: View Demo
         url: "#"
   - section_id: call-to-action
-    component: "cta_block.html"
-    type: ctablock
+    type: section_cta
     title: This Is Call to Action Block! 
     subtitle: >-
       This is an optional description for the call to action block.
@@ -34,5 +32,5 @@ menus:
   main:
     weight: 2
     title: Features
-template: features
+template: landing
 ---

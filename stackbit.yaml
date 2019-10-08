@@ -163,13 +163,11 @@ models:
       - type: image
         name: avatar
         label: Avatar
-  home:
+  landing:
     type: page
-    label: Home
-    template: home
-    file: index.md
+    label: Landing Page
+    template: landing
     hideContent: true
-    singleInstance: true
     fields:
       - type: string
         name: title
@@ -184,63 +182,15 @@ models:
           type: reference
           labelField: title
           models:
-            - contentblock
-            - ctablock
-            - faqblock
-            - featuresblock
-            - heroblock
-            - postsblock
-            - pricingblock
-            - reviewsblock
-  pricing:
-    type: page
-    label: Pricing
-    template: pricing
-    file: pricing.md
-    hideContent: true
-    singleInstance: true
-    fields:
-      - type: string
-        name: title
-        label: Title
-        description: The title of the page.
-        required: true
-      - type: list
-        name: sections
-        label: Sections
-        description: Pricing page sections.
-        items:
-          type: reference
-          labelField: title
-          models:
-            - contentblock
-            - ctablock
-            - faqblock
-            - pricingblock
-  features:
-    type: page
-    label: Features
-    template: features
-    file: features.md
-    hideContent: true
-    singleInstance: true
-    fields:
-      - type: string
-        name: title
-        label: Title
-        description: The title of the page.
-        required: true
-      - type: list
-        name: sections
-        label: Sections
-        description: Features page sections.
-        items:
-          type: reference
-          labelField: title
-          models:
-            - contentblock
-            - ctablock
-            - featuresblock
+            - section_content
+            - section_cta
+            - section_faq
+            - section_features
+            - section_hero
+            - section_posts
+            - section_pricing
+            - section_reviews
+            - section_contact
   blog:
     type: page
     label: Blog
@@ -254,26 +204,6 @@ models:
         label: Title
         description: The title of the page.
         required: true
-  contact:
-    type: page
-    label: Contact
-    template: contact
-    file: contact.md
-    singleInstance: true
-    fields:
-      - type: string
-        name: title
-        label: Title
-        description: The title of the page.
-        required: true
-      - type: string
-        name: subtitle
-        label: Subtitle
-        description: The text shown below the page title.
-      - type: image
-        name: img_path
-        label: Image
-        description: The image shown below the page title.
   page:
     type: page
     label: Page
@@ -307,19 +237,19 @@ models:
       - type: string
         name: subtitle
         label: Subtitle
-        description: The text shown just below the post title.
+        description: The text shown just below the Title or the Featured Image.
       - type: date
         name: date
         label: Date
         required: true
       - type: image
         name: thumb_img_path
-        label: Featured Image
+        label: Blog Feed Image
         description: The image shown in the blog feed.
       - type: image
-        name: content_img_path
-        label: Alternative Featured Image
-        description: The image shown in the single post.
+        name: img_path
+        label: Featured Image
+        description: The image shown below the title.
       - type: string
         name: excerpt
         label: Excerpt
@@ -331,24 +261,18 @@ models:
     fields:
       - type: string
         name: section_id
-        label: Element ID
+        label: Element ID of this section
+        description: The element ID can be used to link to this section from another section
       - type: string
         name: title
         label: Title
-        description: The title of the section.
-      - type: string
-        name: component
-        label: Component
-        required: true
-        hidden: true
-  contentblock:
+        description: The title of this section
+  section_content:
     type: object
     label: Content Section
     extends:
       - section
     fields:
-      - name: component
-        default: content_block.html
       - type: markdown
         name: content
         label: Content
@@ -370,14 +294,12 @@ models:
         label: Action Buttons
         items:
           type: action
-  ctablock:
+  section_cta:
     type: object
     label: Call to Action Section
     extends:
       - section
     fields:
-      - name: component
-        default: cta_block.html
       - type: string
         name: subtitle
         label: Subtitle
@@ -387,14 +309,12 @@ models:
         label: Action Buttons
         items:
           type: action
-  faqblock:
+  section_faq:
     type: object
     label: FAQ Section
     extends:
       - section
     fields:
-      - name: component
-        default: faq_block.html
       - type: string
         name: subtitle
         label: Subtitle
@@ -421,14 +341,12 @@ models:
             - type: markdown
               name: answer
               label: Answer
-  featuresblock:
+  section_features:
     type: object
     label: Features Section
     extends:
       - section
     fields:
-      - name: component
-        default: features_block.html
       - type: string
         name: subtitle
         label: Subtitle
@@ -465,14 +383,12 @@ models:
               label: Action Buttons
               items:
                 type: action
-  heroblock:
+  section_hero:
     type: object
     label: Hero Section
     extends:
       - section
     fields:
-      - name: component
-        default: hero_block.html
       - type: markdown
         name: content
         label: Content
@@ -486,14 +402,12 @@ models:
         label: Action Buttons
         items:
           type: action
-  postsblock:
+  section_posts:
     type: object
     label: Posts List
     extends:
       - section
     fields:
-      - name: component
-        default: posts_block.html
       - type: string
         name: subtitle
         label: Subtitle
@@ -506,14 +420,12 @@ models:
           - gray
           - white
         default: gray
-  pricingblock:
+  section_pricing:
     type: object
     label: Pricing Section
     extends:
       - section
     fields:
-      - name: component
-        default: pricing_block.html
       - type: string
         name: subtitle
         label: Subtitle
@@ -553,14 +465,12 @@ models:
               label: Action Buttons
               items:
                 type: action
-  reviewsblock:
+  section_reviews:
     type: object
     label: Reviews Section
     extends:
       - section
     fields:
-      - name: component
-        default: reviews_block.html
       - type: string
         name: subtitle
         label: Subtitle
@@ -590,6 +500,26 @@ models:
             - type: string
               name: content
               label: Content
+  section_contact:
+    type: object
+    label: Contact Section
+    extends:
+      - section
+    fields:
+      - name: title
+        required: true
+      - type: string
+        name: subtitle
+        label: Subtitle
+        description: The text shown below the title.
+      - type: image
+        name: img_path
+        label: Image
+        description: The image shown below the title.
+      - type: markdown
+        name: content
+        label: Content
+        description: The text content of the section, appears before contact form
   action:
     type: object
     label: Action

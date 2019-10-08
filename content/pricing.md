@@ -2,8 +2,7 @@
 title: Pricing
 sections:
   - section_id: pricing
-    component: "pricing_block.html"
-    type: pricingblock
+    type: section_pricing
     bg: gray
     title: Pricing Plans
     subtitle: >-
@@ -42,8 +41,7 @@ sections:
           - label: Order Now
             url: "/signup"
   - section_id: faq
-    component: "faq_block.html"
-    type: faqblock
+    type: section_faq
     bg: gray
     title: Frequently Asked Questions
     subtitle: >-
@@ -62,5 +60,5 @@ menus:
   main:
     weight: 3
     title: Pricing
-template: pricing
+template: landing
 ---

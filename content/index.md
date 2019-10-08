@@ -2,8 +2,7 @@
 title: Home
 sections:
   - section_id: hero
-    component: "hero_block.html"
-    type: heroblock
+    type: section_hero
     image: images/hero.png
     title: This Is A Big Hero Headline
     content: |-
@@ -12,8 +11,7 @@ sections:
       - label: Learn More
         url: "/features"
   - section_id: features
-    component: "features_block.html"
-    type: featuresblock
+    type: section_features
     bg: gray
     title: Features
     subtitle: >-
@@ -41,8 +39,7 @@ sections:
           - label: Learn More
             url: "/features"
   - section_id: reviews
-    component: "reviews_block.html"
-    type: reviewsblock
+    type: section_reviews
     bg: white
     title: Testimonials
     subtitle: >-
@@ -61,8 +58,7 @@ sections:
         content: >-
           Integer consectetur purus neque, ac porttitor enim convallis vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus.
   - section_id: call-to-action
-    component: "cta_block.html"
-    type: ctablock
+    type: section_cta
     title: This Is Call To Action Block!
     subtitle: >-
       This is an optional description for the call to action block.
@@ -70,13 +66,12 @@ sections:
       - label: Get Started
         url: "/signup"
   - section_id: recent-posts
-    component: "posts_block.html"
-    type: postsblock
+    type: section_posts
     bg: gray
     title: Latest Posts
 menus:
   main:
     weight: 1
     title: Home
-template: home
+template: landing
 ---
