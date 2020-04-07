@@ -1,8 +1,4 @@
 ---
 title: Blog
-menus:
-  secondary:
-    weight: 2
-    title: Blog
-template: blog
+layout: blog
 ---

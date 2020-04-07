@@ -1,20 +1,22 @@
-<section id="{{ include_dict.section.section_id }}" class="block cta-block bg-accent outer">
+{% set section = include_dict.section %}
+<section id="{{ section.section_id }}" class="block cta-block bg-accent outer">
   <div class="inner-large">
     <div class="grid">
       <div class="cell block-content">
-        {% if include_dict.section.title %}
-        <h2 class="block-title">{{ include_dict.section.title }}</h2>
+        {% if section.title %}
+        <h2 class="block-title">{{ section.title }}</h2>
         {% endif %}
-        {% if include_dict.section.subtitle %}
+        {% if section.subtitle %}
         <p class="block-subtitle">
-          {{ include_dict.section.subtitle | safe }}
+          {{ section.subtitle | safe }}
         </p>
         {% endif %}
       </div><!-- .block-content -->
-      {% if include_dict.section.actions %}
+      {% if section.actions %}
       <div class="cell block-buttons">
-        {% for action in include_dict.section.actions %}
-        <a href="{{ action.url | relative_url }}" class="button white large">{{ action.label }}</a>
+        {% for action in section.actions %}
+          {% set include_dict = {'action': action, 'class_names': 'button white large'} %}
+          {% include "action-link.html" %}
         {% endfor %}
       </div><!-- .block-buttons -->
       {% endif %}

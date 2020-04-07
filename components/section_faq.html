@@ -1,18 +1,19 @@
-<section id="{{ include_dict.section.section_id }}" class="block faq-block bg-{{ include_dict.section.bg }} outer">
+{% set section = include_dict.section %}
+<section id="{{ section.section_id }}" class="block faq-block bg-{{ section.background }} outer">
   <div class="inner-small">
     <div class="block-header">
-      {% if include_dict.section.title %}
-      <h2 class="block-title">{{ include_dict.section.title }}</h2>
+      {% if section.title %}
+      <h2 class="block-title">{{ section.title }}</h2>
       {% endif %}
-      {% if include_dict.section.subtitle %}
+      {% if section.subtitle %}
       <p class="block-subtitle">
-        {{ include_dict.section.subtitle | safe }}
+        {{ section.subtitle | safe }}
       </p>
       {% endif %}
     </div><!-- .block-header -->
-    {% if include_dict.section.faqitems %}
+    {% if section.faq_items %}
     <dl class="faq-accordion">
-      {% for faqitem in include_dict.section.faqitems %}
+      {% for faqitem in section.faq_items %}
       <dt class="accordion-header">
         <button class="accordion-trigger">
           <div class="accordion-title">{{ faqitem.question }}</div>

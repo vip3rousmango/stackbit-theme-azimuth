@@ -14,8 +14,9 @@ window.addEventListener('scroll', function (e) {
 });
 
 function handleHeader(scrollPos) {
-  if (scrollPos > 0)
+  if (scrollPos > 0) {
     document.body.classList.add('has--scrolled');
-  else
+  } else {
     document.body.classList.remove('has--scrolled');
+  }
 }

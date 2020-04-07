@@ -20,16 +20,17 @@
           {% endif %}
         </div><!-- .widget -->
 
-        {% if site.menus.secondary and site.params.footer.has_nav or site.params.footer.has_social %}
+        {% if site.params.footer.has_nav and site.params.footer.nav_links or site.params.footer.has_social and site.params.footer.social_links %}
         <nav class="widget footer-navigation">
           <div class="footer-nav-inside">
-            {% if site.menus.secondary and site.params.footer.has_nav %}
+            {% if site.params.footer.nav_links and site.params.footer.has_nav %}
             <div class="secondary-nav">
               <h2 class="widget-title">{{ site.params.footer.nav_title }}</h2>
               <ul class="secondary-menu">
-                {% for item in site.menus.secondary %}
+                {% for action in site.params.footer.nav_links %}
                 <li>
-                  <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                  {% set include_dict = {'action': action} %}
+                  {% include "action-link.html" %}
                 </li>
                 {% endfor %}
               </ul>
@@ -38,7 +39,14 @@
             {% if site.params.footer.has_social %}
             <div class="social-nav">
               <h2 class="widget-title">{{ site.params.footer.social_title }}</h2>
-              {% include "social.html" %}
+              <ul class="social-links">
+                {% for action in site.params.footer.social_links %}
+                <li>
+                  {% set include_dict = {'action': action} %}
+                  {% include "action-link.html" %}
+                </li>
+                {% endfor %}
+              </ul><!-- .social-links -->
             </div><!-- .social-nav -->
             {% endif %}
           </div><!-- .footer-nav-inside -->
@@ -61,8 +69,9 @@
     <div class="inner">
       {{ site.params.footer.content | safe }}
       &nbsp;
-      {% for link in site.params.footer.links %}
-      <a href="{{ link.url }}" {% if link.new_window %}target="_blank" rel="noopener" {% endif %}>{{ link.text }}</a>.
+      {% for action in site.params.footer.links %}
+        {% set include_dict = {'action': action} %}
+        {% include "action-link.html" %}
       {% endfor %}
     </div><!-- .inner -->
   </div><!-- .site-info -->

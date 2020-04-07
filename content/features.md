@@ -3,7 +3,7 @@ title: Features
 sections:
   - section_id: features
     type: section_content
-    bg: gray
+    background: gray
     image: images/feature1.png
     title: The Best Features of Your Services
     content: |-
@@ -28,9 +28,5 @@ sections:
     actions:
       - label: Get Started
         url: "#"
-menus:
-  main:
-    weight: 2
-    title: Features
-template: landing
+layout: landing
 ---

@@ -1,18 +1,19 @@
-<section id="{{ include_dict.section.section_id }}" class="block reviews-block bg-{{ include_dict.section.bg }} outer">
+{% set section = include_dict.section %}
+<section id="{{ section.section_id }}" class="block reviews-block bg-{{ section.background }} outer">
   <div class="block-header inner-small">
-    {% if include_dict.section.title %}
-    <h2 class="block-title">{{ include_dict.section.title }}</h2>
+    {% if section.title %}
+    <h2 class="block-title">{{ section.title }}</h2>
     {% endif %}
-    {% if include_dict.section.subtitle %}
+    {% if section.subtitle %}
     <p class="block-subtitle">
-      {{ include_dict.section.subtitle | safe }}
+      {{ section.subtitle | safe }}
     </p>
     {% endif %}
   </div><!-- .block-header -->
-  {% if include_dict.section.reviews %}
+  {% if section.reviews %}
   <div class="inner">
     <div class="grid">
-      {% for review in include_dict.section.reviews %}
+      {% for review in section.reviews %}
       <blockquote class="cell review">
         <div class="review-inside">
           <p class="review-text">{{ review.content | safe }}</p>

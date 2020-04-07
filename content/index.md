@@ -12,11 +12,11 @@ sections:
         url: "/features"
   - section_id: features
     type: section_features
-    bg: gray
+    background: gray
     title: Features
     subtitle: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus.
-    featureslist:
+    features:
       - title: The Best Feature of Your Services
         image: images/feature1.png
         content: |-
@@ -40,7 +40,7 @@ sections:
             url: "/features"
   - section_id: reviews
     type: section_reviews
-    bg: white
+    background: white
     title: Testimonials
     subtitle: >-
       Aliquam malesuada ligula eget est fringilla blandit. Integer finibus semper libero id sodales. 
@@ -67,11 +67,7 @@ sections:
         url: "/signup"
   - section_id: recent-posts
     type: section_posts
-    bg: gray
+    background: gray
     title: Latest Posts
-menus:
-  main:
-    weight: 1
-    title: Home
-template: landing
+layout: landing
 ---

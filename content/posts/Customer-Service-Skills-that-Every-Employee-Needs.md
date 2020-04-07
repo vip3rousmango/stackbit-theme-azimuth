@@ -5,9 +5,9 @@ subtitle: >-
 excerpt: >-
     Sed nec metus dignissim quam finibus aliquet. Cras luctus, nibh id consequat interdum, massa massa tempor ante.
 date: 2018-01-11
-thumb_img_path: images/5_thumb.jpg
-img_path: images/5.jpg
-template: post
+thumb_image: images/5_thumb.jpg
+image: images/5.jpg
+layout: post
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus est a dolor iaculis vulputate. Mauris libero nulla, commodo sit amet tempus quis, finibus cursus tellus. Duis non velit vel velit euismod elementum. Aliquam porta et nisl id mattis. Fusce vitae massa orci. Ut euismod ornare orci ac interdum. Morbi vulputate ullamcorper purus eu dictum. Vestibulum ac neque faucibus lectus egestas volutpat in vitae velit. Morbi elementum nibh libero, ac ultricies metus laoreet ac. Nam tempus ligula a nulla tincidunt, sit amet semper sapien condimentum.

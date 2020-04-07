@@ -3,9 +3,9 @@ title: Behind the Scenes - The Design of Azimuth
 excerpt: >-
     Quisque ultrices metus sed libero ultricies condimentum. Suspendisse ut faucibus purus. Mauris at pharetra risus.
 date: 2018-01-09
-thumb_img_path: images/6_thumb.jpg
-img_path: images/6.jpg
-template: post
+thumb_image: images/6_thumb.jpg
+image: images/6.jpg
+layout: post
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis convallis bibendum. Aenean ac massa vitae lectus semper iaculis. Pellentesque urna nibh, volutpat ac accumsan a, malesuada non arcu. Ut mi eros, facilisis eget dictum quis, semper ut velit. Phasellus vulputate, odio eu consequat sollicitudin, arcu nulla auctor elit, vitae placerat elit elit sit amet ipsum. Curabitur pulvinar leo ac laoreet semper. Integer ut libero dui. Ut id nunc ornare, ornare tellus eu, rutrum ipsum. Donec molestie iaculis tristique. Quisque euismod commodo leo ac ultrices.

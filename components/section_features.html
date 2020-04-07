@@ -1,17 +1,18 @@
-<section id="{{ include_dict.section.section_id }}" class="block features-block bg-{{ include_dict.section.bg }} outer">
+{% set section = include_dict.section %}
+<section id="{{ section.section_id }}" class="block features-block bg-{{ section.background }} outer">
   <div class="block-header inner-small">
-    {% if include_dict.section.title %}
-    <h2 class="block-title">{{ include_dict.section.title }}</h2>
+    {% if section.title %}
+    <h2 class="block-title">{{ section.title }}</h2>
     {% endif %}
-    {% if include_dict.section.subtitle %}
+    {% if section.subtitle %}
     <p class="block-subtitle">
-      {{ include_dict.section.subtitle | safe }}
+      {{ section.subtitle | safe }}
     </p>
     {% endif %}
   </div><!-- .block-header -->
-  {% if include_dict.section.featureslist %}
+  {% if section.features %}
   <div class="inner">
-    {% for feature in include_dict.section.featureslist %}
+    {% for feature in section.features %}
     <div class="block-item">
       <div class="grid">
         {% if feature.image %}
