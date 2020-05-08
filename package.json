@@ -21,6 +21,8 @@
   "homepage": "https://docs.stackbit.com/unibit/",
   "dependencies": {
     "@stackbit/unibit": "~0.1.11",
+    "kind-of": "^6.0.3",
+    "minimist": "^1.2.5",
     "nodemon": "^1.19.1"
   }
 }
