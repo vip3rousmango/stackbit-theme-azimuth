@@ -13,12 +13,10 @@
         {% endif %}
       </div><!-- .block-content -->
       {% if section.actions %}
-      <div class="cell block-buttons">
-        {% for action in section.actions %}
-          {% set include_dict = {'action': action, 'class_names': 'button white large'} %}
-          {% include "action-link.html" %}
-        {% endfor %}
-      </div><!-- .block-buttons -->
+      <p class="cell block-buttons">
+        {% set include_dict = {'actions': section.actions} %}
+        {% include "cta_buttons.html" %}
+      </p>
       {% endif %}
     </div><!-- .grid -->
   </div><!-- .inner -->

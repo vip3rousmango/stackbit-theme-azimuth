@@ -8,5 +8,5 @@
         {{ post.date | date_format("%A, %B %e, %Y") }}
     {% endif %}
     </time>
-    {% if post.author %}{% set author = getData(post.author) %}, By {{ author.first_name }} {{ author.last_name }}{% endif %}
+    {% if post.author %}{% set author = getData(post.author) %}, by {{ author.first_name }} {{ author.last_name }}{% endif %}
 </footer>

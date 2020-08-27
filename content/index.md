@@ -10,6 +10,7 @@ sections:
     actions:
       - label: Learn More
         url: "/features"
+        primary: true
   - section_id: features
     type: section_features
     background: gray
@@ -65,6 +66,7 @@ sections:
     actions:
       - label: Get Started
         url: "/signup"
+        primary: true
   - section_id: recent-posts
     type: section_posts
     background: gray

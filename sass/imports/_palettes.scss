@@ -4,10 +4,12 @@
  */
 .palette-purple {
   a {
-    &:hover,
-    &:focus {
-      border-color: _palette(accent-purple);
-      color: _palette(accent-purple);
+    &:not(.button) {
+      &:hover,
+      &:focus {
+        border-color: _palette(accent-purple);
+        color: _palette(accent-purple);
+      }
     }
   }
 
@@ -19,28 +21,14 @@
   input[type="submit"],
   input[type="button"],
   input[type="reset"],
-  a.button {
+  .button {
     background: _palette(accent-purple);
     border-color: _palette(accent-purple);
-    color: #fff;
   }
 
   .button.secondary {
     background: transparent;
     color: _palette(accent-purple);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: _palette(accent-purple);
-      color: #fff;
-    }
-  }
-
-  .button.white {
-    background: #fff;
-    border-color: transparent;
-    color: _palette(primary);
   }
 
   .underline {
@@ -64,11 +52,6 @@
       .plan-inside {
         border-color: _palette(accent-purple);
       }
-
-      .button {
-        background: _palette(accent-purple);
-        color: #fff;
-      }
     }
   }
 
@@ -83,10 +66,12 @@
 
 .palette-green {
   a {
-    &:hover,
-    &:focus {
-      border-color: _palette(accent-green);
-      color: _palette(accent-green);
+    &:not(.button) {
+      &:hover,
+      &:focus {
+        border-color: _palette(accent-green);
+        color: _palette(accent-green);
+      }
     }
   }
 
@@ -98,28 +83,14 @@
   input[type="submit"],
   input[type="button"],
   input[type="reset"],
-  a.button {
+  .button {
     background: _palette(accent-green);
     border-color: _palette(accent-green);
-    color: #fff;
   }
 
   .button.secondary {
     background: transparent;
     color: _palette(accent-green);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: _palette(accent-green);
-      color: #fff;
-    }
-  }
-
-  .button.white {
-    background: #fff;
-    border-color: transparent;
-    color: _palette(primary);
   }
 
   .underline {
@@ -143,11 +114,6 @@
       .plan-inside {
         border-color: _palette(accent-green);
       }
-
-      .button {
-        background: _palette(accent-green);
-        color: #fff;
-      }
     }
   }
 
@@ -162,10 +128,12 @@
 
 .palette-orange {
   a {
-    &:hover,
-    &:focus {
-      border-color: _palette(accent-orange);
-      color: _palette(accent-orange);
+    &:not(.button) {
+      &:hover,
+      &:focus {
+        border-color: _palette(accent-orange);
+        color: _palette(accent-orange);
+      }
     }
   }
 
@@ -177,28 +145,14 @@
   input[type="submit"],
   input[type="button"],
   input[type="reset"],
-  a.button {
+  .button {
     background: _palette(accent-orange);
     border-color: _palette(accent-orange);
-    color: #fff;
   }
 
   .button.secondary {
     background: transparent;
     color: _palette(accent-orange);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: _palette(accent-orange);
-      color: #fff;
-    }
-  }
-
-  .button.white {
-    background: #fff;
-    border-color: transparent;
-    color: _palette(primary);
   }
 
   .underline {
@@ -221,11 +175,6 @@
     &.highlight {
       .plan-inside {
         border-color: _palette(accent-orange);
-      }
-
-      .button {
-        background: _palette(accent-orange);
-        color: #fff;
       }
     }
   }
