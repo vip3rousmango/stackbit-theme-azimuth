@@ -16,10 +16,8 @@
         </div>
         {% if section.actions %}
         <p class="block-buttons">
-          {% for action in section.actions %}
-            {% set include_dict = {'action': action, 'class_names': 'button white large'} %}
-            {% include "action-link.html" %}
-          {% endfor %}
+          {% set include_dict = {'actions': section.actions} %}
+          {% include "cta_buttons.html" %}
         </p>
         {% endif %}
       </div>

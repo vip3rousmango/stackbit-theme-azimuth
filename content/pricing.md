@@ -30,6 +30,7 @@ sections:
         actions:
           - label: Order Now
             url: "/signup"
+            primary: true
       - title: Enterprise
         price: $149/m
         details: |-

@@ -22,10 +22,8 @@
       <div class="post-content">
         {{ page.content }}
       </div><!-- .post-content -->
-      <footer class="post-meta">
-        <time class="published"
-          datetime="{{page.date | date_format("%Y-%m-%d %H:%M") }}">{{page.date | date_format("%A, %B %e, %Y") }}</time>
-      </footer><!-- .post-meta -->
+      {% set include_dict = {'page': page, 'date_type': 'long'} %}
+      {% include "blog_post_footer.html" %}
     </article><!-- .post -->
 
     <!-- Next/previous post navigation TBD -->
